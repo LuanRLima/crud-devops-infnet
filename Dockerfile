@@ -1,14 +1,11 @@
 # Base Image
 FROM amazoncorretto:17-alpine-jdk
 
-# Working Directory
-WORKDIR /app
-
 # Copy JAR and Dependencies (optimized)
-COPY build/libs/*.jar app.jar
+ADD target/crud-devops.jar crud-devops.jar
 
 # Expose the Application Port
 EXPOSE 8080
 
 # Command to Start the Application
-CMD ["java", "-jar", "app.jar"] 
+CMD ["java", "-jar", "crud-devops.jar"]
