@@ -1,5 +1,5 @@
 # Base Image
-FROM openjdk:17.0.2-jdk
+FROM amazoncorretto:17-alpine-jdk
 
 # Working Directory
 WORKDIR /app
